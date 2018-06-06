@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    
+    <Title>Cake.OpenCoverToCoberturaConverter</Title>
+    <Description>Cake addin for OpenCoverToCoberturaConverter</Description>
+    <Authors>Charles Solar</Authors>
+    <Company>Charles Solar</Company>
+    <Copyright>Copyright (c) 2018</Copyright>
+    <PackageTags>Cake addin OpenCoverToCoberturaConverter</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/volak/Cake.OpenCoverToCoberturaConverter</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/volak/Cake.OpenCoverToCoberturaConverter</PackageProjectUrl>
+    <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cake.Common" Version="0.28.0" />
+    <PackageReference Include="Cake.Core" Version="0.28.0" />
+  </ItemGroup>
+</Project>
