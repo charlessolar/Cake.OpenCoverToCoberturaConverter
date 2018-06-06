@@ -24,15 +24,22 @@ var isMasterBranch = System.String.Equals("master", branchName, System.StringCom
 
 var gitVersion = GitVersion();
 
+string NugetVersion() {
+	string version = string.Concat(gitVersion.Major, ".", gitVersion.Minor);
+	string semVersion = string.Concat(version, ".", gitVersion.BuildMetaData, ".", buildNumber);
+	string nuget = semVersion;
+	// tag non master branches with pre-release 
+	// gitversion in the future will support something similar
+	if(!isMasterBranch && !local) 
+		nuget += "-" + branchName;
+	return nuget;
+}
+
 string GetDotNetCoreArgsVersions()
 {
         string version = string.Concat(gitVersion.Major, ".", gitVersion.Minor);
         string semVersion = string.Concat(version, ".", gitVersion.BuildMetaData, ".", buildNumber);
-        string nuget = semVersion;
-        // tag non master branches with pre-release 
-        // gitversion in the future will support something similar
-        if(!isMasterBranch && !local) 
-            nuget += "-" + branchName;
+        string nuget = NugetVersion();
 
     return string.Format(
         @"/p:Version={1} /p:AssemblyVersion={0} /p:FileVersion={0} /p:ProductVersion={0}",
@@ -123,7 +130,7 @@ Task("Publish")
 			throw new InvalidOperationException("Could not resolve NuGet API url.");
 		}
 
-		var package = "./nuget/Cake.OpenCoverToCoberturaConverter." + gitVersion.NuGetVersionV2 + ".nupkg";
+		var package = "./nuget/Cake.OpenCoverToCoberturaConverter." + NugetVersion() + ".nupkg";
             
 		// Push the package.
 		NuGetPush(package, new NuGetPushSettings {
