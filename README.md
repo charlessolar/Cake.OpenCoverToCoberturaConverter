@@ -5,6 +5,9 @@ Small Cake addin to run [OpenCoverToCoberturaConverter](https://github.com/danie
 ## Usage
 
 ```
-  context.OpenCoverToCoberturaConverter("OpenCover.xml", "Cobertura.xml");
+  #addin "nuget:?package=Cake.OpenCoverToCoberturaConverter&version=0.1.1.2"
+  #tool "nuget:?package=OpenCoverToCoberturaConverter&version=0.3.2"
+
+  OpenCoverToCoberturaConverter("OpenCover.xml", "Cobertura.xml");
 
 ```
