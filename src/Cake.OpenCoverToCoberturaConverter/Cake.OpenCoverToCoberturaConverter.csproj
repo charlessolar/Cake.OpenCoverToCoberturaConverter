@@ -15,11 +15,12 @@
     <RepositoryUrl>https://github.com/volak/Cake.OpenCoverToCoberturaConverter</RepositoryUrl>
     <PackageProjectUrl>https://github.com/volak/Cake.OpenCoverToCoberturaConverter</PackageProjectUrl>
     <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
     <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cake.Common" Version="0.35.0" />
-    <PackageReference Include="Cake.Core" Version="0.35.0" />
+    <PackageReference Include="Cake.Common" Version="0.35.0" PrivateAssets="All" />
+    <PackageReference Include="Cake.Core" Version="0.35.0" PrivateAssets="All" />
   </ItemGroup>
 </Project>
