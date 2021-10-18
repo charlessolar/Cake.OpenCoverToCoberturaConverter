@@ -8,7 +8,8 @@ namespace Cake.OpenCoverToCoberturaConverter
     /// <summary>
     /// Extension methods for converting open cover reports to cobertura
     /// </summary>
-    [CakeAliasCategory("OpenCoverToCoberturaConverter")]
+    [CakeAliasCategory("OpenCover")]
+    [CakeAliasCategory("Cobertura")]
     public static class OpenCoverToCoberturaConverterCakeAliases
     {
         /// <summary>
