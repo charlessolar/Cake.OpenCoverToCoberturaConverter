@@ -6,7 +6,7 @@ environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
   NUGET_API_KEY:
-    secure: nyYYvfNcljaFo6s6IBdC3lhqwAKOC9HfQjPguKXoHfgs22MwakH+IeXrM2Xn1uc0
+    secure: bs7wZQ9Sqcw77LgH6qn49Y6c2dYkwRUbP2oY/AdweBaecsOxZJrkm47hQhkmAwVO
   NUGET_URL: https://www.nuget.org/api/v2/package
   
 # Build script
